@@ -9,6 +9,15 @@ class CommentSection extends React.Component {
 
     }
 
+    addNewComment = e => {
+        e.preventDefault();
+        const newComment = {
+            username: 'NameofPerson',
+            text: this.state.newComment
+        }
+        this.setState({comments: [...this.state.comments, newComment], newComment: ''})
+    }
+
     changeHandler = e => {
         this.setState({
             [e.target.name]: e.target.value
@@ -28,9 +37,14 @@ class CommentSection extends React.Component {
 
                 <p className="timestamp">{this.props.timestamp}</p>
 
-                <input type="text" name='newComment' value={this.state.newComment}  placeholder="Add a Comment.." />
-                            
-                        </div>
+                <form onSubmit={this.addNewComment}>
+
+                    <input
+                     type="text"
+                     name='newComment'
+                     value={this.state.newComment} onChange={this.changeHandler} placeholder="Add a Comment.." />
+                </form>
+            </div>
                     );
                     
                 })
