@@ -23,7 +23,7 @@ class App extends React.Component {
       return (
         <div className="App">
 
-          <SearchBar />
+          <SearchBar changeHandler={this.changeHandler}/>
           <PostContainer data={this.state.data} />
       
         </div>
