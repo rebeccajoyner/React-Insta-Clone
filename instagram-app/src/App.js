@@ -15,7 +15,9 @@ class App extends React.Component {
 
       componentDidMount() {
      this.setState({ data: dummyData })
-    }
+      }
+  
+  
     render() {
 
       return (
