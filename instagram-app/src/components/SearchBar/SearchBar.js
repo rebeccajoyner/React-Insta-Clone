@@ -10,8 +10,9 @@ class SearchBar extends React.Component {
             <input
                 type="text"
                 onChange={this.props.changeHandler}
+                onSubmit={this.props.searchFilter}
                 name="search"
-                value="search"
+                value={this.props.newSearch}
                 placeholder="Search.." />
         );
     };

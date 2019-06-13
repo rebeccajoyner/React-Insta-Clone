@@ -9,7 +9,8 @@ import dummyData from './dummy-data';
 
 class App extends React.Component {
   state = {
-    data: []
+    data: [],
+    search: ''
   };
   
 
@@ -18,12 +19,21 @@ class App extends React.Component {
       }
   
   
+  searchFilter = e => {
+    const newFilter = this.state.data.filter(post => 
+      post.username === this.state.search);
+    
+  }
+  
+  
     render() {
 
       return (
         <div className="App">
 
-          <SearchBar changeHandler={this.changeHandler}/>
+          <SearchBar
+            changeHandler={this.changeHandler} newSearch={this.state.search} />
+          
           <PostContainer data={this.state.data} />
       
         </div>

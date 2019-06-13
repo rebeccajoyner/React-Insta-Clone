@@ -40,9 +40,11 @@ class CommentSection extends React.Component {
                 <form onSubmit={this.addNewComment}>
 
                     <input
-                     type="text"
-                     name='newComment'
-                     value={this.state.newComment} onChange={this.changeHandler} placeholder="Add a Comment.." />
+                    type="text"
+                    name='newComment'
+                    value={this.state.newComment} onChange={this.changeHandler}
+                    placeholder="Add a Comment.."
+                   />
                 </form>
             </div>
                     );
