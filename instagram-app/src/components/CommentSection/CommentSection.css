@@ -1,0 +1,15 @@
+
+.comment-sec {
+
+    border: 2px solid lightskyblue;
+}
+
+.comment-sec h3 {
+
+    border: 2px dotted darkviolet;
+}
+
+.comment-sec p {
+
+    border: 2px dashed darkseagreen;
+}
